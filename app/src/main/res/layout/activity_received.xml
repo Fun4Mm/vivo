@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceivedActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"
+        android:gravity="bottom"
+        android:textColor="@android:color/white"
+        android:text="Hello"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_below="@id/title"
+        android:id="@+id/iv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:id="@+id/tvIcon"
+            android:textSize="50sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/iv_bg"
+            android:gravity="center"
+            android:text="Az"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:onClick="installFont"
+        android:textAllCaps="false"
+        android:id="@+id/btnInstall"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="ထည့္သြင္းမည္"
+        android:layout_below="@id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="changeFont"
+        android:textAllCaps="false"
+        android:id="@+id/btnChange"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="ေဖာင့္ေျပာင္းမည္"
+        android:layout_below="@id/btnInstall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.gms.ads.AdView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/adView"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner">
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/tvGuide"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@id/btnChange"
+        android:text="Install ကိုႏွိပ္ပါ။
+ၿပီးရင္ Change Font ကိုႏွိပ္ပါ။
+ကိုေ႐ြးၿပီး Apply လုပ္ေပးလိုက္ပါ။"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/dev"
+        android:layout_marginBottom="3dp"
+        android:layout_above="@id/adView"
+        android:onClick="gotoAuthor"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Special Thanks Khon Soe Zaw Thu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginBottom="3dp"
+        android:layout_above="@id/dev"
+        android:onClick="gotoDeveloper"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Developed By Khun Htetz Naing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
