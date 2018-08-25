@@ -47,6 +47,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.htetznaing.vivomyanmarfonts.Adapter.ListAdapter;
 import com.htetznaing.vivomyanmarfonts.Utils.BuildConfigz;
 import com.htetznaing.vivomyanmarfonts.Utils.CheckInternet;
+import com.htetznaing.vivomyanmarfonts.Utils.CheckUpdate;
 import com.htetznaing.vivomyanmarfonts.Utils.CustomSpanTypeface;
 import com.htetznaing.vivomyanmarfonts.Utils.FontToolkit.ReadTTF;
 import com.htetznaing.vivomyanmarfonts.Utils.myWorker;
@@ -124,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initApp(){
+        new CheckUpdate(this,false).check();
         MDetect.INSTANCE.init(this);
         downloadPath = Environment.getExternalStorageDirectory()+"/Download/";
         mDownloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
@@ -565,6 +567,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.rate:
                 rate();
+                break;
+            case R.id.update:
+                new CheckUpdate(this,true).check();
                 break;
         }
         return super.onOptionsItemSelected(item);

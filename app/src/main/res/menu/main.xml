@@ -4,4 +4,5 @@
 
     <item android:title="Rate" android:id="@+id/rate" android:icon="@drawable/rate" app:iconTint="@android:color/white" app:showAsAction="always"/>
     <item android:title="Share" android:id="@+id/share" android:icon="@drawable/share" app:iconTint="@android:color/white" app:showAsAction="always"/>
+    <item android:title="Share" android:id="@+id/update" android:icon="@drawable/update" app:iconTint="@android:color/white" app:showAsAction="always"/>
 </menu>

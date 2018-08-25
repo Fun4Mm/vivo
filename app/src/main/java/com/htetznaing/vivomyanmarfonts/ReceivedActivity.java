@@ -83,7 +83,8 @@ public class ReceivedActivity extends AppCompatActivity {
         tvGuide.setTypeface(typeface);
         tvGuide.setText("Install ကိုႏွိပ္ပါ။\n" +
                 "ၿပီးရင္ Change Font ကိုႏွိပ္ပါ။\n" +
-                ""+mTitle+" ကိုေ႐ြးၿပီး Apply လုပ္ေပးလိုက္ပါ။");
+                "Local ကိုႏွိပ္ပါ၊ Font ကိုဆက္ႏွိပ္ပါ။\n"+
+                ""+mTitle+" ကိုေ႐ြးၿပီး\nApply လုပ္ေပးလိုက္ပါ။");
 //        new install().execute();
     }
 
@@ -199,7 +200,7 @@ public class ReceivedActivity extends AppCompatActivity {
         protected void onPostExecute(String font) {
             super.onPostExecute(font);
             MMToast.INSTANCE.showShortToast(ReceivedActivity.this,"သင့်ဖုန်းထဲကို "+font+" ထည့်သွင်းပြီးပါပြီ\n" +
-                    "ဖောင့်ပြောင်းမည် ကိုနှိပ်ပြီး "+font+" ကို Apply လုပ်ပေးပါ။");
+                    "ဖောင့်ပြောင်းမည် ကိုနှိပ်ပြီး Local ကိုႏွိပ္ပါ၊ Font ကိုဆက္ႏွိပ္ၿပီး "+font+" ကို Apply လုပ်ပေးပါ။");
         }
     }
 
